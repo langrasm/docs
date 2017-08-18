@@ -14,7 +14,8 @@ If you don't have an SVN client like Tortoise SVN installed, make a copy of the 
 
 ## Import Module APMAgent
 
-Import the module APMAgent in the modeler.
+Import the module APMAgent in the modeler. Or download APM from the Mendix appstore:
+https://appstore.home.mendix.com/link/app/6127/
 
 ![](attachments/Installation_steps/Import_Module_Package.png)
 
