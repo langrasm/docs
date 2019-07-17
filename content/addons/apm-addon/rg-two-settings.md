@@ -12,6 +12,18 @@ By default, the best options are already selected for the most common situations
 * **Environment Name**
 * **Environment Type** – Mendix Studio Pro, test, acceptance, and production environments are available. Mendix Studio Pro instances are private to the creator of the environment. To use test, acceptance, or production, you need to be a cloud operator in Mendix.
 * **Runtime agent memory usage** – This determines several technical settings, such as maximum trap duration, maximum number of trap records, maximum number of messages or performance nodes recorded in the agent that still need to be sent to the manager. This setting is a protection against too much memory use. In Mendix Studio Pro, you can safely set this to **Large** to record/trap more. Setting this to me **Medium** is advised.
+
+The APM Agent will approximately use the following amount of heap memory:
+
+Statistics:
+20mb per 100 microflows. (*max 25 actions per microflow)
+
+Log / Trap:
+Small: 313.67 kB (*741 character per log line)
+Medium: 1.53MB (*741 character per log line)
+
+The memory size needed is 2 bytes per character.
+
 * **Enabled** – You can configure if browser agent guest users, browser agents, or runtimes are allowed to connect to this environment. This is a security setting.
 * **Statistics collection** – Statistics are available **Per microflow** and **Per microflow action**. For **Per microflow action**, statistics will be generated for actions in a microflow (**Per microflow** does not do this).
 * **Trap message collection** – This can be set to **All messages** and **Without database nodes**. Changing this to **Without database nodes** will stop the sending of logs from database nodes to APM. These nodes include:
